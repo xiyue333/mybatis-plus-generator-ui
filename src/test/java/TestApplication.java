@@ -6,14 +6,14 @@ public class TestApplication {
 
 
     public static void main(String[] args) {
-        GeneratorConfig config = GeneratorConfig.builder().jdbcUrl("jdbc:mysql://localhost:3306/autoapi")
+        GeneratorConfig config = GeneratorConfig.builder().jdbcUrl("jdbc:mysql://localhost:3306/test")
                 .userName("root")
                 .password("root")
                 .port(8068)
                 .driverClassName("com.mysql.cj.jdbc.Driver")
                 .basePackage("com.github.davidfantasy.mybatisplus.generatorui.example")
                 //数据库表前缀，生成entity名称时会去掉
-                .tablePrefix("t_")
+                .tablePrefix("b_")
                 .nameConverter(new NameConverter() {
                     @Override
                     public String serviceNameConvert(String entityName) {
